@@ -1,4 +1,4 @@
-#阿里云移植进入ARM9平台
+# 阿里云移植进入ARM9平台
 ## 1、可以先配置src/configs/config.arm-linux.demo
 
 配置完
@@ -19,10 +19,10 @@ CONFIG_src/http = y
 CONFIG_src/guider = y
 CONFIG_src/coap = y
 CONFIG_sample = y
-# Automatically Generated Section End
+#Automatically Generated Section End
 
-# VENDOR :   arm-linux
-# MODEL  :   demo
+#VENDOR :   arm-linux
+#MODEL  :   demo
 CONFIG_ENV_CFLAGS = -Wall
 
 OVERRIDE_CC = arm-linux-gnueabi-gcc
@@ -32,11 +32,11 @@ OVERRIDE_AR = arm-linux-gnueabi-gcc-ar
 #CONFIG_sample =
 CONFIG_src/sdk-tests =
 
-##2、编译完成之后进入output/release/src
+## 2、编译完成之后进入output/release/src
 
 修改Makefile的编译器arm-hisiv300-linux-uclibcgnueabi-gcc（什么平台对应什么编译器，不能直接-static直接编译，因为阿里云开始开发时是就是在gcc的库上进行）
 
-##3、编完之后查看库是否一致
+## 3、编完之后查看库是否一致
 file ext.mqtt
  
 ext.mqtt: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-uClibc.so.0, not stripped
