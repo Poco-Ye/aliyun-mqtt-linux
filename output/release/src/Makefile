@@ -1,6 +1,6 @@
 .PHONY: all
 
-CC          := gcc
+CC          := arm-hisiv300-linux-gcc
 
 CFLAGS      := -I../include
 CFLAGS      += -I../include/iot-sdk
